@@ -1,0 +1,49 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;            
+    right: 0;          
+    width: 100%;
+    font-family: "American Typewriter", serif;
+    z-index: 1000;
+    background-color: #20242d;
+}
+
+.logo-header img {
+    max-height: 55px; 
+    margin-left: 7px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+    height: 75px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+    font-weight: bold;
+}
+
+.abas {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.abas:hover {
+    transform: scale(1.1); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+span {
+    font-size: 20px;
+    color: white;
+}

@@ -1,0 +1,13 @@
+.mapBox {
+    padding-top: 100px;
+}
+
+.mapBox h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mapBox iframe {
+    border: 0;
+}
