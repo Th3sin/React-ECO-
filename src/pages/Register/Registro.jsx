@@ -26,7 +26,7 @@ function Registro() {
                             <img src={icon1} alt="Ícone Empresa Coletora" className={styles.entidadeIcon} />
                             <h2 className={styles.coletora}>Empresa Coletora</h2>
                         </Link>
-                        <p className={styles.descricao}>Amplie seu impacto sustentável oferecendo serviços para indivíduos e empresas.</p>
+                        <p className={styles.descricao}>Amplie seu negócio oferecendo serviços para indivíduos e empresas.</p>
                     </button>
                 </div>
 
