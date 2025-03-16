@@ -1,9 +1,9 @@
 .texture {
     position: relative;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 270px;
   }
   
   .containerRegistro {
@@ -12,7 +12,6 @@
     align-items: center; 
     gap: 20px;  
     flex-wrap: wrap; 
-    height: 100vh;
   }
   
   .containerEntidades {
@@ -31,7 +30,7 @@
   .entidadeButton {
     border: none;
     width: 240px;
-    height: 230px;
+    height: 220px;
     border-radius: 40px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

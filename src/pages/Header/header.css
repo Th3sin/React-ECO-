@@ -1,17 +1,19 @@
 header {
     position: fixed;
     top: 0;
-    left: 0;            
-    right: 0;          
+    left: 0;
+    right: 0;
     width: 100%;
     font-family: "American Typewriter", serif;
     z-index: 1000;
     background-color: #20242d;
+    height: 75px; 
 }
+
 
 .logo-header img {
     max-height: 55px; 
-    margin-left: 7px;
+    margin-left: 658px;
 }
 
 nav {
@@ -25,7 +27,7 @@ nav {
 nav a {
     text-decoration: none;
     color: rgb(255, 255, 255); 
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .abas {

@@ -13,12 +13,9 @@ const Login = () => {
   };
 
   return (
-    <div className={styles.texture}>
+    <div className={styles.container}>
       <div className={styles.containerLogin}>
         <form onSubmit={handleSubmit}>
-          {/* <div className={styles.logoLogin}>
-            <img src={Logo} alt='Logo' title='Logo eco+' />
-          </div> */}
           <h1>Login</h1>
           <div>
             <label htmlFor="email">Usuário</label>
