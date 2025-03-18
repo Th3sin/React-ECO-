@@ -6,7 +6,7 @@ const materiaisEletronicos = [
     "Monitor", "Impressora", "Teclado", "Mouse", "Carregador",
     "Fone de ouvido", "Roteador", "Modem", "HD externo",
     "Pendrive", "Câmera digital", "Caixa de som", "DVD player",
-    "Vídeo game", "Bateria recarregável"
+    "Vídeo game", "Bateria recarregável", "Garrafa PET"
 ];
 
 const formatarCEP = (cep) => {
