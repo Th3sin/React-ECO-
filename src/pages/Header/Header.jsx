@@ -14,15 +14,14 @@ function Header() {
                 </div>
 
                 <div className="links-header">
-
-                
-                    <Link to="/Login" className="abas">Login</Link>
                     
                     <Link to="/DescarteMaterial" className='abas'>Descartar</Link>
 
                     <Link to="/Produto" className="abas">Produtos</Link>
                 
                     <Link to="/BaixeApp" className="abas">Baixe o App</Link>
+
+                    <Link to="/Login" className="abas">Entre / Cadastre-se</Link>
 
                 </div>
             </nav>
