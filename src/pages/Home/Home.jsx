@@ -1,15 +1,15 @@
 import React from "react";
 import "./home.css";
-import banner from '../../img/banner_sustentabilidade.png';
+import banner from '../../img/banner_sustentabilidade-removebg.png';
 
 function Home() {
     return (
         <div className="container-home">
-            <div className="imagem-banner">
+            <div className="banner">
             <img src={banner}/>
             </div>
-            <p>Bem-vindo a eco+</p>
-            <p>Conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</p>
+            <h1>Bem-vindo a eco+</h1>
+            <h2>Conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h2>
          </div>
     );
 }

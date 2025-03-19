@@ -1,10 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
 .container-descarte {
     max-width: 1200px;
     margin: 50px auto;
@@ -78,4 +71,8 @@
     height: 415px;
     border-radius: 10px;
     border: rgb(99, 98, 98) 1px;
+}
+
+.link-to-informativo h2 {
+    text-align: center;
 }
