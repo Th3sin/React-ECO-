@@ -12,13 +12,18 @@ header {
 
 .logo-header img {
     max-height: 55px; 
-    margin-left: 658px;
+}
+
+.user-profile-picture img {
+    max-height: 45px;
+    border-radius: 100px;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    gap: 20px;
     padding: 0 20px;
     height: 75px;
 }
