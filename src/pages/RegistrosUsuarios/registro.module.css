@@ -1,0 +1,61 @@
+.containerUsuarios h1 {
+  text-align: center;
+  color: #218962;
+}
+
+.containerRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.containerEntidades {
+  flex-direction: column; 
+}
+
+.entidadeIcon {
+  width: 80px;
+  margin: 20px 0 10px 0;
+}
+
+.entidadeButton {
+  border: none;
+  width: 240px;
+  height: 220px;
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.entidadeButton:hover {
+  transform: translateY(-5px);
+}
+
+.entidadeTexto { 
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.descricao {
+  text-align: center;
+  margin: 15px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

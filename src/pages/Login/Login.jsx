@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from './login.module.css';
+import logoLogin from '../../img/icon-ecoplus-login.png'
 
 function Login() {
   
@@ -29,29 +30,26 @@ function Login() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerElementosLogin}>
       <div className={styles.containerLogin}>
         <form onSubmit={handleSubmit}>
+
+        <div className={styles.logoEcoplus}>
+          <Link to={"/"}><img src={logoLogin} alt="Logo eco+" title="logo Ecoplus" className={styles.logoImg} /></Link>
+        </div>
+
           <h1>Login</h1>
+
           <div>
             <label htmlFor="email">Usuário</label>
-            <input
-              type="email"
-              placeholder="Digite seu e-mail"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
+            <input type="email" placeholder="Digite seu e-mail" value={username} onChange={(e) => setUsername(e.target.value)}
+            required />
           </div>
+
           <div>
             <label htmlFor="password">Senha</label>
-            <input
-              type="password"
-              placeholder="Digite sua senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+            <input type="password" placeholder="Digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)}
+              required />
           </div>
 
           {error && <p className="error-message">{error}</p>}
@@ -68,9 +66,10 @@ function Login() {
 
           <div className={styles.signupLink}>
             <p>Não tem uma conta?
-              <Link to="/Registro"> Cadastre-se</Link>
+              <Link to="/Registro">Cadastre-se</Link>
             </p>
           </div>  
+
         </form>
       </div>
     </div>

@@ -5,18 +5,17 @@ import UserPic from '../../img/user-profile.jpg';
 
 function Header() {
     return (
-        <header>
+        <header> 
             <nav>
-                <div className="logo-header">
-                    <Link to="/">
-                        <img src={Logo} alt="Logo Ecomais" title="Logo Ecomais" />
+                <div className='user-profile-picture'>
+                    <Link to="#">
+                        <img src={UserPic} alt='foto de perfil do usuario eco+' title='foto de perfil do usuario eco+' />
                     </Link>
                 </div>
 
-                <div className='user-profile-picture'>
-                    <Link to="#">
-                        <img src={UserPic} alt='foto de perfil do usuario eco+' title='foto de perfil do usuario eco+'> 
-                        </img>
+                <div className="logo-header">
+                    <Link to="/">
+                        <img src={Logo} alt="Logo Ecomais" title="Logo Ecomais" />
                     </Link>
                 </div>
 
@@ -29,6 +28,7 @@ function Header() {
                     <Link to="/Login" className="abas">Entre</Link>
 
                 </div>
+
             </nav>
         </header>
     );
