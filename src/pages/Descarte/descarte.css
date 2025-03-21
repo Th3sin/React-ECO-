@@ -30,12 +30,17 @@
     width: 100%;
     padding: 10px 0;
     cursor: pointer;
-    background: green;
+    background: #218962;
     border-radius: 10px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 15px;
     color: #eff0f5;
+    font-weight: bold;
+}
+
+.form-material button:hover {
+    background: #173a3b;
 }
 
 .material-inputs {
