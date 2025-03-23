@@ -6,10 +6,10 @@ import icon2 from "../../img/iconPJ.png"
 import icon3 from "../../img/iconPF.png"
 
 function Registro() {
-    return (
-        <div className={styles.texture}>
+    return (  
+        <div className={styles.containerUsuarios}>
+            <h1>Qual o seu perfil?</h1>
             <div className={styles.containerRegistro}>
-            
                 <div className={styles.containerEntidades}>
                     <button className={styles.entidadeButton}>
                         <Link to="/CadastroCliente" className={styles.link}>
@@ -45,4 +45,4 @@ function Registro() {
     );
 }
 
-export default Registro;
+export default Registro

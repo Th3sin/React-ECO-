@@ -3,6 +3,9 @@ import imagemProduto from '../../img/garrafaReutilizavel.jpeg';
 import imagemProduto2 from '../../img/sacolaEcologica.jpeg';
 import imagemProduto3 from '../../img/canudoBambu.jpeg'; 
 
+
+{/* ARRAY | LISTA DOS PRODUTOS À VENDA */}
+
 const produtos = [
   {
     id: 1,
@@ -30,19 +33,28 @@ const produtos = [
 const Produto = () => {
   return (
     <div className={styles.container}>
+
       <h1 className={styles.title}>Produtos Ecológicos</h1>
+
       <div className={styles.grid}>
+        
+        {/* O MAP RETORNA OS OBJETOS DA LISTA EM HTML */}
         {produtos.map((produto) => (
+
           <div key={produto.id} className={styles.card}>
-            <img
-              src={produto.imagem}
-              alt={produto.nome}
-              className={styles.image}
-            />
+
+            <img src={produto.imagem} alt={produto.nome}className={styles.image} />
+            
             <h2 className={styles.produtoNome}>{produto.nome}</h2>
+
             <p className={styles.descricao}>{produto.descricao}</p>
+
             <p className={styles.preco}>{produto.preco}</p>
-            <button className={styles.botao}>Comprar</button>
+
+            <button className={styles.botao}>
+              Comprar
+            </button>
+
           </div>
         ))}
       </div>
