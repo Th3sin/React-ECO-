@@ -19,9 +19,13 @@ function Header() {
                     </Link>
                 </div>
 
+                <div className='user-name'>
+                        <p>Breno Ramos Ferreira</p>
+                </div>
+
                 <div className="links-header">
                     
-                    <Link to="/DescarteMaterial" className='abas'>Descartar</Link>
+                    <Link to="/Ecomapa" className='abas'>Descartar</Link>
 
                     <Link to="/Produto" className="abas">Produtos</Link>
 

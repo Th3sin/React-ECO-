@@ -7,6 +7,21 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.backButton a {
+  text-decoration: none;
+  color: green;
 }
 
 .containerLogin {

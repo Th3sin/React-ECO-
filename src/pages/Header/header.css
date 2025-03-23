@@ -25,6 +25,14 @@ header {
     border-radius: 100px;
 }
 
+.user-name {
+    position: absolute;
+    left: 74px; 
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
 nav {
     padding: 16px;
     display: flex;
