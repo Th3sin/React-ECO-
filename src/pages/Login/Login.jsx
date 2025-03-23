@@ -31,6 +31,11 @@ function Login() {
 
   return (
     <div className={styles.containerElementosLogin}>
+
+      <div className={styles.backButton}>
+        <Link to={"/"}> ⬅ </Link>
+      </div>
+
       <div className={styles.containerLogin}>
         <form onSubmit={handleSubmit}>
 
