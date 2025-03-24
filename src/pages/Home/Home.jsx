@@ -11,6 +11,7 @@ function Home() {
                 <h2>ECO+</h2>
                 <h3>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h3>
                 <h4>No eco+ conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae quisquam nesciunt inventore ipsa dolores adipisci possimus aperiam, incidunt veritatis praesentium, facilis harum molestiae expedita, esse atque itaque quas pariatur enim impedit rem voluptates provident! Illum quaerat culpa porro nesciunt quos aut, aliquam eius nemo minus magni quo cumque, suscipit iusto. Porro fugiat vero, rem aut a id vel quo architecto iste molestias nobis tempora numquam nesciunt error nulla nemo repellat ratione ipsam at sunt? Laudantium quisquam ex autem cum, reiciendis sit earum illum! Delectus, non fugiat! Quo culpa pariatur placeat voluptatum illo impedit odio! Reiciendis, in? Consequatur, excepturi tenetur.</p>
             </section>
 
             <div className="banner-home">
