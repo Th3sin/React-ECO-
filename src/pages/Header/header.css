@@ -5,9 +5,9 @@ header {
     right: 0;
     width: 100%;
     font-family: "American Typewriter", serif;
-    z-index: 1000;
     background-color: #20242d;
     height: 80px; 
+    z-index: 10;
 }
 
 .logo-header {
@@ -23,6 +23,14 @@ header {
 .user-profile-picture img {
     max-height: 45px;
     border-radius: 100px;
+}
+
+.user-name {
+    position: absolute;
+    left: 74px; 
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
 }
 
 nav {

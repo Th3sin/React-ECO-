@@ -7,6 +7,27 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.backButton img {
+  width: 60px;
+  border: 10px solid #eff0f5; 
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.backButton img:hover {
+  transform: scale(1.2);
 }
 
 .containerLogin {
@@ -133,7 +154,8 @@
 }
 
 .containerLogin button[type="submit"] {
-  margin-top: 40px;
+  margin-top: 35px;
+  margin-bottom: 7.5px;
   width: 100%;
   padding: 10px 0;
   cursor: pointer;

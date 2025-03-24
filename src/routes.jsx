@@ -4,7 +4,7 @@ import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Produto from './pages/Produto/Produto';
-import DescarteMaterial from "./pages/Descarte/DescarteMaterial";
+import Ecomapa from './components/Mapa/Ecomapa';
 import Register from './pages/RegistrosUsuarios/Registro';
 import CadastroCliente from './pages/RegistrosUsuarios/CadastroCliente';
 import CadastroEmpresaColetora from './pages/RegistrosUsuarios/CadastroEmpresaColetora';
@@ -26,22 +26,20 @@ function AppHeader() {
 function RoutesApp() {
     return (
         <BrowserRouter>
-            <AppHeader /> 
-            <div className="main-content"> 
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Produto" element={<Produto />} />
-                    <Route path="/DescarteMaterial" element={<DescarteMaterial />} />
-                    <Route path="/informativo" element={<Informativo />} />
+            <AppHeader />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Produto" element={<Produto />} />
+                <Route path="/Ecomapa" element={<Ecomapa />} />
+                <Route path="/informativo" element={<Informativo />} />
 
-                    {/* Páginas sem Header */}
-                    <Route path="/Login" element={<Login />} />
-                    <Route path="/Registro" element={<Register />} />
-                    <Route path="/CadastroCliente" element={<CadastroCliente />} />
-                    <Route path="/CadastroEmpresaColetora" element={<CadastroEmpresaColetora />} />
-                    <Route path="/CadastroEmpresa" element={<CadastroEmpresa />} />
-                </Routes>
-            </div>
+                {/* Páginas sem Header */}
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Registro" element={<Register />} />
+                <Route path="/CadastroCliente" element={<CadastroCliente />} />
+                <Route path="/CadastroEmpresaColetora" element={<CadastroEmpresaColetora />} />
+                <Route path="/CadastroEmpresa" element={<CadastroEmpresa />} />
+            </Routes>
         </BrowserRouter>
     );
 }
