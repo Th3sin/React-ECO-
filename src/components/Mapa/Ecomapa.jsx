@@ -7,7 +7,7 @@ const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 const tipoResiduo = [
     "Resíduos orgânicos", "Resíduos eletrônicos", "Resíduos hospitalares", "Resíduos perigosos", 
-    "Resíduos de construção e demolição", "Resíduos Têxteis", "Resíduos perfurocortantes", 
+    "Resíduos de construção e demolição", "Resíduos têxteis", "Resíduos perfurocortantes", 
     "Resíduos químicos", "Resíduos radioativos", "Resíduos perigosos"
 ];
 
