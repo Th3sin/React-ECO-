@@ -1,6 +1,10 @@
+.containerUsuarios {
+  margin-top: 80px;
+}
+
 .containerUsuarios h1 {
   text-align: center;
-  color: #218962;
+  color: #173a3b;
 }
 
 .containerRegistro {
@@ -28,9 +32,9 @@
 .entidadeButton {
   border: none;
   width: 240px;
-  height: 220px;
+  height: 200px;
   border-radius: 40px;
-  background-color: white;
+  background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -47,7 +51,6 @@
   font-size: 16px;
   text-align: center;
   color: #333;
-  margin-bottom: 5px;
 }
 
 .descricao {

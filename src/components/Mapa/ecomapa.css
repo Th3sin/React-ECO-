@@ -1,7 +1,10 @@
+.pagina-descarte-material {
+    margin-top: 120px;
+}
+
 .container-descarte {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 50px auto;
-    margin-top: 150px;
     padding: 20px;
     background-color: #eff0f5;
     backdrop-filter: blur(10px);
@@ -22,7 +25,7 @@
 .form-material h1 {
     font-size: 22px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
 }
 
 .form-material button {
@@ -69,13 +72,6 @@
 
 .mapBox {
     flex: 1;  
-}
-
-.mapBox iframe {
-    width: 100%;
-    height: 415px;
-    border-radius: 10px;
-    border: rgb(99, 98, 98) 1px;
 }
 
 .link-to-informativo h2 {

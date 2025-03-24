@@ -18,7 +18,7 @@ function CadastroMaterial() {
     const unidadesMedida = ['kg', 'litros', 'unidades'];
 
     return (
-        <div className="form-container">
+        <div className="form-cadastroMaterial-container">
             <h1>Cadastro de Material</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

@@ -1,18 +1,22 @@
 import React from "react";
 import "./home.css";
+import bannerECO from '../../img/banner_sustentabilidade-removebg.png'
 
 function Home() {
     return (
         <div className="container-home">
-            <section className="pg1-container">
-                <section className="pg1">
-                    <h1>BEM-VINDO AO</h1>
-                    <h2>ECO+</h2>
-                    <h3>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h3>
-                    <h4>No eco+ conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h4>
-                </section>
+           <div className="banner-container">
+            <section className="pg1">
+                <h1>BEM-VINDO AO ECO+</h1>
+                <h2>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h2>
+                <h4>No eco+ conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h4>
             </section>
-    
+
+            <div className="banner-home">
+                <img src={bannerECO} alt="Banner sustentabilidade" />
+                </div>
+        </div>
+
             <section className="pg2-container">
                 <section className="pg2">
                     <h1>O QUE É O <br/> eco+?</h1>
@@ -47,7 +51,7 @@ function Home() {
                 </section>
             </section>
     
-            <footer>
+            {/* <footer>
                 <section className="organizacao">
                     <section className="caixa-das-sociais">
                         <p className="siga">NOS SIGA:</p>
@@ -81,7 +85,7 @@ function Home() {
                     <a href="inst-privacidade.html">Política de Privacidade</a>
                     <a href="inst-termos-de-uso.html">Termos de Uso</a>
                 </section>
-            </footer>
+            </footer> */}
         </div>
     );
 }
