@@ -1,7 +1,10 @@
+.pagina-descarte-material {
+    margin-top: 120px;
+}
+
 .container-descarte {
     max-width: 1300px;
     margin: 50px auto;
-    margin-top: 130px;
     padding: 20px;
     background-color: #eff0f5;
     backdrop-filter: blur(10px);

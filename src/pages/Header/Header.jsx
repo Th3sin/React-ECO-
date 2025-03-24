@@ -9,13 +9,13 @@ function Header() {
             <nav>
                 <div className='user-profile-picture'>
                     <Link to="#">
-                        <img src={UserPic} alt='foto de perfil do usuario eco+' title='foto de perfil do usuario eco+' />
+                        <img src={UserPic} alt='Foto de perfil do usuário' title='Clique para acessar as funcionalidades do seu perfil' />
                     </Link>
                 </div>
 
                 <div className="logo-header">
                     <Link to="/">
-                        <img src={Logo} alt="Logo Ecomais" title="Logo Ecomais" />
+                        <img src={Logo} alt="Logo Ecoplus" title="Bem-vindo" />
                     </Link>
                 </div>
 

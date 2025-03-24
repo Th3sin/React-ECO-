@@ -7,11 +7,9 @@ function Home() {
         <div className="container-home">
            <div className="banner-container">
             <section className="pg1">
-                <h1>BEM-VINDO AO</h1>
-                <h2>ECO+</h2>
-                <h3>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h3>
+                <h1>BEM-VINDO AO ECO+</h1>
+                <h2>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h2>
                 <h4>No eco+ conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum vitae quisquam nesciunt inventore ipsa dolores adipisci possimus aperiam, incidunt veritatis praesentium, facilis harum molestiae expedita, esse atque itaque quas pariatur enim impedit rem voluptates provident! Illum quaerat culpa porro nesciunt quos aut, aliquam eius nemo minus magni quo cumque, suscipit iusto. Porro fugiat vero, rem aut a id vel quo architecto iste molestias nobis tempora numquam nesciunt error nulla nemo repellat ratione ipsam at sunt? Laudantium quisquam ex autem cum, reiciendis sit earum illum! Delectus, non fugiat! Quo culpa pariatur placeat voluptatum illo impedit odio! Reiciendis, in? Consequatur, excepturi tenetur.</p>
             </section>
 
             <div className="banner-home">
@@ -53,7 +51,7 @@ function Home() {
                 </section>
             </section>
     
-            <footer>
+            {/* <footer>
                 <section className="organizacao">
                     <section className="caixa-das-sociais">
                         <p className="siga">NOS SIGA:</p>
@@ -87,7 +85,7 @@ function Home() {
                     <a href="inst-privacidade.html">Política de Privacidade</a>
                     <a href="inst-termos-de-uso.html">Termos de Uso</a>
                 </section>
-            </footer>
+            </footer> */}
         </div>
     );
 }
