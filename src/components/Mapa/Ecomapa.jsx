@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import "./ecomapa.css";
 import { Link } from 'react-router-dom';
+import botao from "../../img/botao-voltar-verde.png"
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
@@ -65,6 +66,7 @@ function Ecomapa() {
 
     return (
         <div className="pagina-descarte-material">
+
             <div className="container-descarte">
                 <div className="form-material">
                     <h1>Encontre os pontos de recebimentos mais próximos de você:</h1>

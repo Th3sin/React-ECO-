@@ -5,9 +5,9 @@ header {
     right: 0;
     width: 100%;
     font-family: "American Typewriter", serif;
-    z-index: 1000;
     background-color: #20242d;
     height: 80px; 
+    z-index: 10;
 }
 
 .logo-header {
