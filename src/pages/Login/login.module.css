@@ -169,3 +169,12 @@
   text-decoration: underline;
   color: #173a3b;
 }
+
+.containerElementosLogin {
+
+  background-image: url("../../img/fundodeimagemblablabla.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+} 
