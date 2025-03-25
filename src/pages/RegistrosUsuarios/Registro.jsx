@@ -1,45 +1,42 @@
 import React from "react"
 import styles from "./registro.module.css"
 import { Link } from "react-router-dom"
-import icon1 from "../../img/icon.png"
-import icon2 from "../../img/iconPJ.png"
-import icon3 from "../../img/iconPF.png"
+import empresaIcon1 from "../../img/Destinadora-icon.png"
+import empresaIcon2 from "../../img/Pessoa-fisica-icon.png"
 
 function Registro() {
     return (  
         <div className={styles.containerUsuarios}>
             <h1>Qual o seu perfil?</h1>
             <div className={styles.containerRegistro}>
-                <div className={styles.containerEntidades}>
-                    <button className={styles.entidadeButton}>
-                        <Link to="/CadastroCliente" className={styles.link}>
-                            <img src={icon3} alt="Ícone Consumidor" className={styles.entidadeIcon} />
-                            <h2 className={styles.consumidor}>Consumidor</h2>
-                        </Link>
-                        <p className={styles.descricao}>Solicite serviços de coleta qualificados.</p>
-                    </button>
-                </div>
 
                 <div className={styles.containerEntidades}>
                     <button className={styles.entidadeButton}>
                         <Link to="/CadastroEmpresaColetora" className={styles.link}>
-                            <img src={icon1} alt="Ícone Empresa Coletora" className={styles.entidadeIcon} />
-                            <h2 className={styles.coletora}>Empresa Coletora</h2>
+                            <img src={empresaIcon1} alt="Ícone Empresa Coletora" className={styles.entidadeIcon} />
+                            <h2 className={styles.coletora}>Empresa Destinadora</h2>
                         </Link>
-                        <p className={styles.descricao}>Amplie seu negócio oferecendo serviços para indivíduos e empresas.</p>
                     </button>
+                </div>
+
+                <div className={styles.Entidadesdescricao}>
+                    <p className={styles.descricao}>Amplie sua atuação oferecendo serviços para pequenos e grandes negócios.</p>
                 </div>
 
                 <div className={styles.containerEntidades}>
                     <button className={styles.entidadeButton}>
                         <Link to="/CadastroEmpresa" className={styles.link}>
-                            <img src={icon2} alt="Ícone Empresa ou Organização" className={styles.entidadeIcon} />
-                            <h2 className={styles.pessoaJuridica}>Empresa ou Organização</h2>
+                            <img src={empresaIcon2} alt="Ícone Empresa ou Organização" className={styles.entidadeIcon} />
+                            <h2 className={styles.pessoaJuridica}>Pessoa Jurídica</h2>
                         </Link>
-                        <p className={styles.descricao}>Solicite serviços de destinação especializados.</p>
                     </button>
                     
                 </div>
+
+                <div className={styles.Entidadesdescricao}>
+                    <p className={styles.descricao}>Solicite serviços de destinação especializados.</p>
+                </div>
+
             </div>
         </div>
     );

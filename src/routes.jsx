@@ -6,7 +6,6 @@ import Login from './pages/Login/Login';
 import Produto from './pages/Produto/Produto';
 import Ecomapa from './components/Mapa/Ecomapa';
 import Register from './pages/RegistrosUsuarios/Registro';
-import CadastroCliente from './pages/RegistrosUsuarios/CadastroCliente';
 import CadastroEmpresaColetora from './pages/RegistrosUsuarios/CadastroEmpresaColetora';
 import CadastroEmpresa from './pages/RegistrosUsuarios/CadastroEmpresa';
 import Informativo from "./pages/Descarte/Informativo";
@@ -16,7 +15,7 @@ function AppHeader() {
     const [showHeader, setShowHeader] = useState(true);
 
     useEffect(() => {
-        const noHeaderRoutes = ["/Login", "/Registro", "/CadastroCliente", "/CadastroEmpresaColetora", "/CadastroEmpresa"];
+        const noHeaderRoutes = ["/Login", "/Registro", "/CadastroEmpresaColetora", "/CadastroEmpresa"];
         setShowHeader(!noHeaderRoutes.includes(location.pathname));
     }, [location]);
 
@@ -36,7 +35,6 @@ function RoutesApp() {
                 {/* Páginas sem Header */}
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Registro" element={<Register />} />
-                <Route path="/CadastroCliente" element={<CadastroCliente />} />
                 <Route path="/CadastroEmpresaColetora" element={<CadastroEmpresaColetora />} />
                 <Route path="/CadastroEmpresa" element={<CadastroEmpresa />} />
             </Routes>
