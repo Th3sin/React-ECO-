@@ -43,7 +43,9 @@
 }
 
 .form-material button:hover {
-    background: #173a3b;
+    background: #1c7453;
+    transform: scale(1.02);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .material-inputs {
