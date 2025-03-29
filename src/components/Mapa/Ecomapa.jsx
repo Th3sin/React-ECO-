@@ -74,7 +74,7 @@ function Ecomapa() {
                     <div className="material-inputs">
                         <label htmlFor="cep" className="label">CEP</label>
                         <input 
-                            type="text" name="cep" value={formData.cep} onChange={handleChange} maxLength="9" placeholder="_____-___"
+                            type="text" name="cep" value={formData.cep} onChange={handleChange} maxLength="9" placeholder=" EX: 12345-678 "
                             required />
                     </div>
 
