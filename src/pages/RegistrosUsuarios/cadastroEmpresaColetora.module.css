@@ -1,0 +1,58 @@
+.formularioColetora {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formularioColetora h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.camposColetora {
+  margin-bottom: 1rem;
+}
+
+.camposColetora label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.camposColetora input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.camposColetora input::placeholder {
+  color: #aaa;
+}
+
+.formularioColetora button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #7ef0ac, #63bd89);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.formularioColetora button:hover {
+  background: linear-gradient(to right, #4ef390, #2b9959);
+}

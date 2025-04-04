@@ -50,5 +50,4 @@ function RoutesApp() {
         </BrowserRouter>
     );
 }
-
 export default RoutesApp;

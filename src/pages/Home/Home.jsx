@@ -1,16 +1,54 @@
 import React from "react";
 import "./home.css";
-import Mapa from '../../../components/Mapa/Ecomapa';
-
-console.log ("Seja bem-vindo!")
+import bannerECO from '../../img/banner_sustentabilidade-removebg.png';
 
 function Home() {
     return (
         <div className="container-home">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quidem earum non totam sit aspernatur? Saepe delectus, quaerat, reiciendis exercitationem consectetur odio quibusdam quos excepturi, magnam at laborum? Magnam temporibus tenetur cupiditate fugiat cumque dolore obcaecati, iusto vero quia rerum, voluptates quos ea explicabo, iure minima dolorem debitis dignissimos expedita voluptatibus itaque sequi consequuntur in neque. Excepturi harum vitae ipsa quibusdam commodi quidem explicabo et modi consequuntur itaque nemo, quae sapiente tempora aliquam recusandae delectus repellendus! Cum tempore, ipsum, consequuntur obcaecati quaerat cupiditate ab earum nulla quae consectetur quas iusto a deleniti officia distinctio rerum architecto illo fuga, dolor doloribus! Doloremque illo iure ex possimus vitae impedit cum maxime ipsum debitis laudantium incidunt quos, temporibus facilis tempora fugit nisi necessitatibus accusantium delectus. Reiciendis iure nostrum, corrupti reprehenderit, necessitatibus labore id eum neque asperiores amet, fugiat obcaecati minus dolores odit nobis ipsam eos! Odit nemo iste incidunt nostrum corporis accusamus quisquam deserunt asperiores modi. Fuga ratione deleniti placeat dolores culpa adipisci quas incidunt molestias? Quos suscipit eius obcaecati voluptatum ratione fugit assumenda! Quis non voluptates rem fuga impedit, autem excepturi aliquam! Dignissimos, obcaecati dicta ab ut neque sapiente laudantium, at ratione quod, blanditiis minus hic eum accusamus repellat. Exercitationem, totam modi.</p>
+            <div className="banner-container">
+                <section className="pg1">
+                    <h1>BEM-VINDO AO ECO+</h1>
+                    <h2>DESCARTE INTELIGENTE PARA UM FUTURO SUSTENTÁVEL</h2>
+                    <h4>No eco+ conectamos pessoas aos destinadores corretos, garantindo que seu lixo chegue ao lugar certo.</h4>
+                </section>
+                <div className="banner-home">
+                    <img src={bannerECO} alt="Banner sustentabilidade" />
+                </div>
+            </div>
 
-        <Mapa />
+            <section className="pg2-container">
+                <section className="pg2">
+                    <h1>O QUE É O <br /> eco+?</h1>
+                    <h2>Somos uma plataforma que facilita o descarte consciente, conectando pessoas e empresas a pontos de coleta e reciclagem de maneira eficiente.</h2>
+                </section>
+            </section>
 
+            <section className="pg3-container">
+                <section className="pg3">
+                    <h1>POR QUE USAR O eco+?</h1>
+                    <h2>Facilidade e responsabilidade ambiental em um só lugar!</h2>
+                    <ul>
+                        <li><p><strong>Localização de pontos de coleta</strong> próximos a você.</p></li>
+                        <li><p><strong>Informações sobre reciclagem</strong> e descarte correto.</p></li>
+                        <li><p><strong>Parcerias com recicladoras</strong> para garantir a destinação adequada.</p></li>
+                        <li><p><strong>Redução de impacto ambiental</strong> através do descarte correto.</p></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section className="pg4-container">
+                <section className="pg4">
+                    <h1>O que você encontra aqui?</h1>
+                    <ul className="list">
+                        <li>Mapa de Coleta</li>
+                        <li>Blog sobre Sustentabilidade</li>
+                        <li>Empresas Parceiras</li>
+                        <li>Dicas de Reciclagem</li>
+                        <li>Contato Direto com Destinadores</li>
+                    </ul>
+                    <button className="learn-more"><a href="h-planos.html">SAIBA MAIS</a></button>
+                </section>
+            </section>
         </div>
     );
 }
