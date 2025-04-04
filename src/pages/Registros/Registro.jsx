@@ -11,7 +11,7 @@ function Registro() {
         <div className="registro-container">
 
             <div className="back-button">
-                <Link to={"/"}> <img src={seta} alt="botão para voltar" title="Voltar" /></Link>
+                <Link to={"/Login"}> <img src={seta} alt="botão para voltar" title="Voltar" /></Link>
             </div>
 
             <h1>Qual o seu perfil?</h1>

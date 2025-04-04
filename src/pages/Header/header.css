@@ -5,7 +5,7 @@ header {
     right: 0;
     width: 100%;
     font-family: "American Typewriter", serif;
-    background-image: url('../../img/textura-folhas-escuras.jpg');
+    background-color: #10292a;
     height: 80px; 
     z-index: 10;
 }

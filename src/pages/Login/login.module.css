@@ -194,7 +194,7 @@
 }
 
 .containerElementosLogin {
-  background-image: url("../../img/textura-folhas-escuras.jpg");
+  background-image: linear-gradient(#153031,#1c2a1b);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
