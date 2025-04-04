@@ -20,7 +20,7 @@ function Header() {
                 </div>
 
                 <div className='user-name'>
-                        <p>Grupo AA Alternativas</p>
+                        <p>EMPRESA B</p>
                 </div>
 
                 <div className="links-header">
