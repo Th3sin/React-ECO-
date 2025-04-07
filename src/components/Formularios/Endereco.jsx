@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { buscarEnderecoPorCEP } from '../../services/viacep.service'; //import do serviço API
+import "./endereco.css";
 
 function Endereco() {
 
@@ -44,8 +45,10 @@ function Endereco() {
   }, [cep]);
 
   return (
-    <div>
+    <div className="container-endereco">
       <h3>Endereço</h3>
+      <p>Digite o CEP para que os campos sejam preenchidos:</p>
+      <br />
 
       <div>
         <label>CEP:</label>

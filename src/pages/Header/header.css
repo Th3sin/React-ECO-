@@ -68,3 +68,27 @@ span {
     font-size: 20px;
     color: white;
 }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #10292a; 
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 1000;
+    width: 150px;
+}
+
+.submenu li {
+    text-decoration: none;
+    list-style: none;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}  

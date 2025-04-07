@@ -1,4 +1,6 @@
-/* servidor Node.js com Express */
+/* API CEP */
+/* SERVIDOR NODE.JS COM EXPRESS */
+/* RODAR NO TERMINAL COM COMANDO: "node server.js" */
 
 import express from "express"; //Express → Framework para criar um servidor HTTP de maneira simples
 import cors from "cors"; //Cors → Middleware que permite que o frontend (React) se comunique com o backend sem bloqueios de CORS
@@ -29,7 +31,6 @@ app.get("/cep/:cep", async (req, res) => {
         res.status(500).json({ error: "Erro interno ao buscar CEP" }); //se der errado, o erro retorna no console
     }
 });
-
 
 //iniciando o servidor na porta 3001
 const PORT = 3001;

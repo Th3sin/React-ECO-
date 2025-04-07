@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id": "da0a",
+      "nome": "AAADestinadora",
+      "email": "AAA@gmail.com",
+      "senha": "123456"
+    },
+    {
+      "id": "cc96",
+      "nome": "",
+      "email": "",
+      "senha": ""
+    },
+    {
+      "id": "b26a",
+      "nome": "Transportadora Eco",
+      "email": "ecotrans@gmail.com",
+      "senha": "abc123"
+    },
+    {
+      "id": "b8fe",
+      "nome": "Cooperativa Verde",
+      "email": "coopverde@gmail.com",
+      "senha": "senhaforte8digitoos"
+    },
+    {
+      "id": "b7f0",
+      "nome": "TesteX",
+      "email": "x@gmail.com",
+      "senha": "123456789"
+    }
+  ]
+}
