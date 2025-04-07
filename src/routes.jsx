@@ -8,7 +8,7 @@ import Register from './pages/Registros/Registro';
 import EmpresaDestinadoraCadastro from './pages/Registros/Destinadora/EmpresaDestinadoraCadastro';
 import CadastroEmpresa from './pages/Registros/Geradora/CadastroEmpresa';
 import Informativo from "./pages/Descarte/Informativo";
-import Background from "./pages/Teste/Background";
+import Endereco from "./components/Formularios/Endereco";
 
 function AppHeader() {
     const location = useLocation();
@@ -44,7 +44,7 @@ function RoutesApp() {
                 <Route path="/Registro" element={<Register />} />
                 <Route path="/CadastroEmpresaColetora" element={<EmpresaDestinadoraCadastro />} />
                 <Route path="/Cadastroempresa" element={<CadastroEmpresa />} />
-                <Route path="/Background" element={<Background />} />
+                <Route path="/Endereco" element={<Endereco />} />
                 
             </Routes>
         </BrowserRouter>

@@ -1,4 +1,6 @@
-/* arquivo de serviço que faz a requisição ao backend */
+/* API CEP */
+/* Arquivo de serviço que faz a requisição ao backend */
+/* RODAR NO TERMINAL COM COMANDO "npx json-server --watch enderecos.json --port 3001" */
 
 export async function buscarEnderecoPorCEP(cep) {
   try {

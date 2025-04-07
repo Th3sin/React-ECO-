@@ -8,15 +8,6 @@
   background-image: linear-gradient(#153031,#1c2a1b);
 }
 
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-}
-
 .back-button img {
   width: 60px;
   border: 5px solid #ffffff; 
@@ -95,4 +86,86 @@
   color: rgb(43, 43, 43);
   font-family: Verdana;
   font-size: 16px;
+}
+
+/* AQUI É O CSS DO FORMULÁRIO SIMPLIFICADO DE CADASTRO */
+
+.formulario-cadastro {
+  width: 450px;
+  height: 450px;
+  background-color: #eff0f5;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.formulario-cadastro h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: #218962;
+}
+
+.formulario-cadastro label  {
+  margin-right: 60px;
+  padding-left: 1px;
+  font-size: 17px;
+  color: #173a3b;
+}
+
+.formulario-cadastro input {
+  padding: 7px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.formulario-cadastro input:focus,
+.formulario-cadastro input:focus {
+  border: 2px solid #218962;
+}
+
+.formulario-cadastro input::placeholder,
+.formulario-cadastro input::placeholder {
+  font-size: 15px;
+  text-align: left;
+}
+
+.formulario-cadastro button[type="submit"] {
+  margin-top: 35px;
+  margin-bottom: 7.5px;
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  background: #218962;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.formulario-cadastro button[type="submit"]:hover {
+  background: #173a3b;
+}
+
+.input-container {
+  position: relative;
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 17px;
+  z-index: 2;
 }

@@ -9,14 +9,14 @@ const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 const tipoResiduo = [ 
     "Orgânico", "Eletrônico", "Hospitalar", "Entulhos", "Têxteis", 
     "Perfurocortante", "Químico", "Radioativo", "Plástico", "Vidro", 
-    "Madeira", "Metais", "Papel", "Agroindustrial", "Inerte" 
+    "Metais", "Papel", "Agroindustrial", "Inerte" 
 ];
 
 // ORGÂNICO
 const materiaisOrgânicos = [ 
     "Sobras de alimentos", "Grãos", "Frutas e vegetais", "Cascas de frutas e legumes", 
     "Polpas", "Restos de carne", "Carnes", "Talos", "Talos de plantas", "Folhas", 
-    "Galhos", "Esterco", "Alimentos vencidos" 
+    "Galhos", "Madeira", "Esterco", "Alimentos vencidos" 
 ];
 
 // ELETRÔNICO
@@ -150,20 +150,6 @@ function Ecomapa() {
                         </select>
                     </div>
 
-                    {/* Porte */}
-                    <div className={styles.materialInputs}>
-                        <label htmlFor="porteMaterial" className={styles.label}>Porte</label>
-                        <select 
-                            name="porteMaterial" 
-                            className={`${styles.selectField} ${styles.selecionePorte}`} 
-                            value={formData.porteMaterial} 
-                            onChange={handleChange}
-                        >
-                            <option value="3">Todos os portes</option>
-                            <option value="7">Porte pequeno</option>
-                            <option value="10">Porte grande</option>
-                        </select>
-                    </div>
 
                     {/* Botão */}
                     <button 
@@ -188,7 +174,7 @@ function Ecomapa() {
                 </div>
             </div>
 
-            {/* Link Informativo */}
+            {/* Link para Informativo */}
             <div className={styles.linkToInformativo}>
                     <Link to="/Informativo">
                         <h2>Clique aqui para saber mais sobre resíduos, reciclagem +</h2>
