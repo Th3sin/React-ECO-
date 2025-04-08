@@ -78,7 +78,8 @@ const Registro = () => {
           <form onSubmit={handleSubmit}>
             
             <label>Nome</label>
-            <input type="text" placeholder="Digite o nome da sua empresa" value={nome} onChange={(e) => setNome(e.target.value)} required />
+            <input type="text" placeholder="Digite o nome da sua empresa" value={nome} onChange={(e) => setNome(e.target.value)} 
+            required />
 
             <label>E-mail</label>
             <input type="email" placeholder="Digite o seu e-mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -97,8 +98,7 @@ const Registro = () => {
 
               <input type={showPassword ? "text" : "password"} placeholder="Confirme a sua senha" value={confirmarSenha} onChange={(e) => setConfirmarSenha(e.target.value)} required />
 
-              <i className={`fas fa-eye${showPassword ? "-slash" : ""} eyeIcon`} onClick={togglePasswordVisibility}
-              ></i>
+              <i className={`fas fa-eye${showPassword ? "-slash" : ""} eyeIcon`} onClick={togglePasswordVisibility}></i>
             </div>
 
             <div className="form-group">
