@@ -55,14 +55,11 @@ function Login() {
           <h1>Login</h1>
 
           <div className={styles.userContainer}>
+
             <label htmlFor="email">Usuário</label>
-            <input
-              type="email"
-              placeholder="Digite seu e-mail"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
+            <input type="email" placeholder="Digite seu e-mail" value={username} onChange={(e) => setUsername(e.target.value)} 
+            required />
+
           </div>
 
           <div className={styles.passwordContainer}>
@@ -78,10 +75,12 @@ function Login() {
           {error && <p className="error-message">{error}</p>}
 
           <div className={styles.recallForget}>
+            
             <label htmlFor="checkbox">
               <input type="checkbox" />
               Lembre de mim
             </label>
+
             <Link to="/esqueceu-senha">Esqueceu a senha?</Link>
           </div>
 
