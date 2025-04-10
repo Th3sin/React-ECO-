@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from './login.module.css';
-import seta from '../../img/botao_voltar_login.png'
-import logoLogin from '../../img/icon-ecoplus-login.png'
+import seta from '../../img/botao-voltar-verde.png';
+import logoLogin from '../../img/icon-ecoplus-login.png';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Login() {
-  
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // Estado para alternar visualização de senha
   const navigate = useNavigate();
 
   // VALIDAÇÃO DADOS FIXOS
@@ -17,12 +19,12 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(""); 
+    setError("");
 
     if (username === "" || password === "") {
       alert("Por favor, preencha todos os campos");
 
-    } else if (username === fixedUsername && password === fixedPassword) { 
+    } else if (username === fixedUsername && password === fixedPassword) {
       navigate("/");
 
     } else {
@@ -30,41 +32,55 @@ function Login() {
     }
   };
 
+  //npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+  //npm install --save @fortawesome/fontawesome-free
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword); // Alterna o estado entre verdadeiro e falso
+  };
+
   return (
     <div className={styles.containerElementosLogin}>
-
       <div className={styles.backButton}>
-        <Link to={"/"}> <img src={seta} alt="botão para voltar" title="Voltar" /></Link>
+        <Link to={"/"}><img src={seta} alt="botão para voltar" title="Voltar" /></Link>
       </div>
 
       <div className={styles.containerLogin}>
         <form onSubmit={handleSubmit}>
 
-        <div className={styles.logoEcoplus}>
-          <Link to={"/"}><img src={logoLogin} alt="Logo eco+" title="Eco+" className={styles.logoImg} /></Link>
-        </div>
+          <div className={styles.logoEcoplus}>
+            <Link to={"/"}><img src={logoLogin} alt="Logo eco+" title="Eco+" className={styles.logoImg} /></Link>
+          </div>
 
           <h1>Login</h1>
 
-          <div>
+          <div className={styles.userContainer}>
+
             <label htmlFor="email">Usuário</label>
-            <input type="email" placeholder="Digite seu e-mail" value={username} onChange={(e) => setUsername(e.target.value)}
+            <input type="email" placeholder="Digite seu e-mail" value={username} onChange={(e) => setUsername(e.target.value)} 
             required />
+
           </div>
 
-          <div>
+          <div className={styles.passwordContainer}>
             <label htmlFor="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)}
-              required />
+            <div className={styles.passwordWrapper}>
+              
+              <input type={showPassword ? "text" : "password"} id="password" placeholder="Digite a sua senha" value={password} onChange={(e) => setPassword(e.target.value)} required className={styles.inputSenha} />
+
+              <i className={`fas fa-eye${showPassword ? "-slash" : ""} ${styles.eyeIcon}`} onClick={togglePasswordVisibility}> </i>
+            </div>
           </div>
 
           {error && <p className="error-message">{error}</p>}
 
           <div className={styles.recallForget}>
+            
             <label htmlFor="checkbox">
               <input type="checkbox" />
               Lembre de mim
             </label>
+
             <Link to="/esqueceu-senha">Esqueceu a senha?</Link>
           </div>
 
@@ -74,7 +90,7 @@ function Login() {
             <p>Não tem uma conta?
               <Link to="/Registro">Cadastre-se</Link>
             </p>
-          </div>  
+          </div>
 
         </form>
       </div>

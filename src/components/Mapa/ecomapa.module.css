@@ -1,8 +1,8 @@
-.pagina-descarte-material {
+.paginaDescarteMaterial {
     margin-top: 120px;
 }
 
-.container-descarte {
+.containerDescarte {
     max-width: 1300px;
     margin: 50px auto;
     padding: 20px;
@@ -16,19 +16,20 @@
     gap: 30px;  
 }
 
-.form-material {
+.formMaterial {
     flex: 1;  
     display: flex;
     flex-direction: column;
 }
 
-.form-material h1 {
+.formMaterial h1 {
+    margin-top: 10px;
     font-size: 22px;
     text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
 }
 
-.form-material button {
+.formMaterial button {
     margin-top: 20px;
     width: 100%;
     padding: 10px 0;
@@ -42,20 +43,18 @@
     font-weight: bold;
 }
 
-.form-material button:hover {
-    background: #1c7453;
-    transform: scale(1.02);
-    transition: background 0.3s ease, transform 0.3s ease;
+.formMaterial button:hover {
+    background: #173a3b;
 }
 
-.material-inputs {
+.materialInputs {
     width: 100%;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 }
 
-.material-inputs input {
+.materialInputs input {
     padding-left: 15px;
     box-sizing: border-box;
     height: 31px;
@@ -63,8 +62,13 @@
     border-style: none;
 }
 
-.material-inputs input::placeholder {
-   font-size: 14px;
+.selectField {
+    padding-left: 13px;
+    box-sizing: border-box;
+    height: 31px;
+    border-radius: 3px;
+    border-style: none;
+    font-size: 14.5px;
 }
 
 .label {
@@ -76,6 +80,6 @@
     flex: 1;  
 }
 
-.link-to-informativo h2 {
+.linkToInformativo h2 {
     text-align: center;
 }

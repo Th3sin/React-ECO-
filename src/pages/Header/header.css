@@ -5,7 +5,7 @@ header {
     right: 0;
     width: 100%;
     font-family: "American Typewriter", serif;
-    background-color: #20242d;
+    background-color: #10292a;
     height: 80px; 
     z-index: 10;
 }
@@ -21,8 +21,10 @@ header {
 }
 
 .user-profile-picture img {
-    max-height: 45px;
-    border-radius: 100px;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
 }
 
 .user-name {
@@ -34,11 +36,14 @@ header {
 }
 
 nav {
+    backdrop-filter: blur(2px);
     padding: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
   
 nav a {
@@ -48,12 +53,12 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: green;
+    color: rgb(255, 255, 255);
 }
 
 .abas {
     background-color: transparent;
-    font-size: 20px;
+    font-size: 17px;
     padding: 10px 15px;
     margin-right: 5px;
     cursor: pointer;
@@ -63,3 +68,27 @@ span {
     font-size: 20px;
     color: white;
 }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #10292a; 
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 1000;
+    width: 150px;
+}
+
+.submenu li {
+    text-decoration: none;
+    list-style: none;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}  

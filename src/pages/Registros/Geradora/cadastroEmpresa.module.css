@@ -1,5 +1,5 @@
 .formularioEmpresa {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -45,7 +45,7 @@
 .formularioEmpresa button {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(to right, #7ef0ac, #63bd89);
+    background: black;
     border: none;
     color: white;
     font-size: 16px;
@@ -54,37 +54,11 @@
 }
   
 .formularioEmpresa button:hover {
-background: linear-gradient(to right, #4ef390, #2b9959);
+background: blue;
 }
   
 .formularioEmpresa p {
 font-size: 14px;
 color: #d9534f;
 margin-top: 5px;
-}
-  
-@media (max-width: 768px) {
-.formularioEmpresa {
-padding: 15px;
-}
-  
-.formularioEmpresa h2 {
-font-size: 20px;
-}
-  
-.formularioEmpresa label {
-font-size: 14px;
-}
-
-.formularioEmpresa input,
-.formularioEmpresa select {
-font-size: 14px;
-padding: 8px;
-}
-  
-.formularioEmpresa button {
-font-size: 14px;
- padding: 10px;
-}
-
 }

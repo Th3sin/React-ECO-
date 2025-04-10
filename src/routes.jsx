@@ -3,22 +3,28 @@ import { useEffect, useState } from "react";
 import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
-import Produto from './pages/Produto/Produto';
 import Ecomapa from './components/Mapa/Ecomapa';
-import Register from './pages/RegistrosUsuarios/Registro';
-import CadastroCliente from './pages/RegistrosUsuarios/CadastroCliente';
-import CadastroEmpresaColetora from './pages/RegistrosUsuarios/CadastroEmpresaColetora';
-import CadastroEmpresa from './pages/RegistrosUsuarios/CadastroEmpresa';
+import Register from './pages/Registros/Registro';
+import EmpresaDestinadoraCadastro from './pages/Registros/Destinadora/EmpresaDestinadoraCadastro';
+import CadastroEmpresa from './pages/Registros/Geradora/CadastroEmpresa';
 import Informativo from "./pages/Descarte/Informativo";
+import Endereco from "./components/Formularios/Endereco";
 
 function AppHeader() {
     const location = useLocation();
     const [showHeader, setShowHeader] = useState(true);
 
     useEffect(() => {
-        const noHeaderRoutes = ["/Login", "/Registro", "/CadastroCliente", "/CadastroEmpresaColetora", "/CadastroEmpresa"];
-        setShowHeader(!noHeaderRoutes.includes(location.pathname));
-    }, [location]);
+        const noHeaderRoutes = [
+            "/Login", 
+            "/Registro", 
+            "/CadastroEmpresaColetora", 
+            "/CadastroEmpresa", 
+            "/Background"
+        ];
+
+        setShowHeader(!noHeaderRoutes.includes(location.pathname)); 
+    }, [location.pathname]);
 
     return showHeader ? <Header /> : null;
 }
@@ -28,20 +34,20 @@ function RoutesApp() {
         <BrowserRouter>
             <AppHeader />
             <Routes>
+
                 <Route path="/" element={<Home />} />
-                <Route path="/Produto" element={<Produto />} />
                 <Route path="/Ecomapa" element={<Ecomapa />} />
                 <Route path="/informativo" element={<Informativo />} />
 
                 {/* Páginas sem Header */}
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Registro" element={<Register />} />
-                <Route path="/CadastroCliente" element={<CadastroCliente />} />
-                <Route path="/CadastroEmpresaColetora" element={<CadastroEmpresaColetora />} />
-                <Route path="/CadastroEmpresa" element={<CadastroEmpresa />} />
+                <Route path="/CadastroEmpresaColetora" element={<EmpresaDestinadoraCadastro />} />
+                <Route path="/Cadastroempresa" element={<CadastroEmpresa />} />
+                <Route path="/Endereco" element={<Endereco />} />
+                
             </Routes>
         </BrowserRouter>
     );
 }
-
 export default RoutesApp;
