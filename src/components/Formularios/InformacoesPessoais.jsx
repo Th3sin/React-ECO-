@@ -44,10 +44,6 @@ const InformacoesPessoais = ({ formData, handleInputChange }) => {
         </select>
       </div>
 
-      <div>
-        <label htmlFor="tipoEmpresa">Tipo de Empresa:</label>
-        <input type="text" id="tipoEmpresa" name="tipoEmpresa" value={formData.tipoEmpresa} onChange={handleInputChange} required placeholder="Fábrica, Restaurante, Hospital, etc." />
-      </div>
     </>
   );
 };

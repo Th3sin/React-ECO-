@@ -8,6 +8,7 @@ function Endereco() {
   const [cep, setCep] = useState('');
   const [logradouro, setLogradouro] = useState('');
   const [numero, setNumero] = useState('');
+  const [complemento, setComplemento] = useState('');
   const [bairro, setBairro] = useState('');
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
@@ -64,6 +65,12 @@ function Endereco() {
       <div>
         <label>Número:</label>
         <input type='number' value={numero} onChange={(e) => setNumero(e.target.value)} />
+      </div>
+
+
+      <div>
+          <label>Complemento</label>
+          <input type="text" name="numero" placeholder="Digite o complemento (opcional)" value={complemento} />
       </div>
 
       <div>

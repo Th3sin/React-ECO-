@@ -3,10 +3,14 @@
 
 import fs from 'fs';
 
-fs.unlink('db.json', 'enderecos.json', (err) => {
-  if (err) {
-    console.error('Erro ao excluir o arquivo:', err);
-  } else {
-    console.log('Arquivo JSON excluído com sucesso!');
-  }
+const arquivos = ['db.json', 'enderecos.json'];
+
+arquivos.forEach((arquivo) => {
+  fs.unlink(arquivo, (err) => {
+    if (err) {
+      console.error(`Erro ao excluir o arquivo ${arquivo}:`, err.message);
+    } else {
+      console.log(`Arquivo ${arquivo} excluído com sucesso!`);
+    }
+  });
 });

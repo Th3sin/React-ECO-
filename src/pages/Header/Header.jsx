@@ -51,7 +51,7 @@ const toggleUserMenu = () => {
                         <ul className='submenu'>
                             <li> <Link to="/Ecomapa">Mapa</Link> </li>
 
-                            <li> <Link to="/Ecomapa">Descartar</Link> </li>
+                            <li> <Link to="/Solicitacao">Descartar</Link> </li>
 
                             <li> <Link to="/Endereco">Consulta CEP</Link> </li>
                         </ul>

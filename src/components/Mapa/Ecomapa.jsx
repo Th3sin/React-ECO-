@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+//import { Marker } from '@react-google-maps/api';
 import styles from "./ecomapa.module.css";
 import { Link } from 'react-router-dom';
 
@@ -149,7 +150,6 @@ function Ecomapa() {
                             ))}
                         </select>
                     </div>
-
 
                     {/* Botão */}
                     <button 

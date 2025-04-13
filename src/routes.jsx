@@ -9,6 +9,13 @@ import EmpresaDestinadoraCadastro from './pages/Registros/Destinadora/EmpresaDes
 import CadastroEmpresa from './pages/Registros/Geradora/CadastroEmpresa';
 import Informativo from "./pages/Descarte/Informativo";
 import Endereco from "./components/Formularios/Endereco";
+import Solicitacao from "./pages/Coleta/Solicitacao";
+// import Infectante from "./pages/Descarte/Infectante";
+// import Quimico from "./pages/Descarte/Quimico";
+// import Radioativo from "./pages/Descarte/Radioativo";
+// import Cortante from "./pages/Descarte/Cortante";
+// import Comuns from "./pages/Descarte/Comuns";
+
 
 function AppHeader() {
     const location = useLocation();
@@ -45,6 +52,12 @@ function RoutesApp() {
                 <Route path="/CadastroEmpresaColetora" element={<EmpresaDestinadoraCadastro />} />
                 <Route path="/Cadastroempresa" element={<CadastroEmpresa />} />
                 <Route path="/Endereco" element={<Endereco />} />
+                <Route path="/Solicitacao" element={<Solicitacao />} />
+                {/* <Route path="/Quimico" element={<Quimico/>} />
+                <Route path="/Infectante" element={<Infectante/>} />
+                <Route path="/Radioativo" element={<Radioativo/>} />
+                <Route path="/Comuns" element={<Comuns />} />
+                <Route path="/Cortante" element={<Cortante />} /> */}
                 
             </Routes>
         </BrowserRouter>
