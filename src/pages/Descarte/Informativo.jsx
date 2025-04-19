@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from './informativo.module.css';
 import biologicalSymbol from "../../img/residuoInfectante.png";
 import chemicalSymbol from "../../img/residuoQuimico.png";
@@ -14,35 +15,35 @@ function Informativo() {
                 <div className={styles.containerResiduo}>
                     <button>
                         <img src={biologicalSymbol} alt="símbolo risco infectante" />
-                        <h2>Resíduo Infectante</h2>
+                        <Link to={"/Infectante"}> <h2>Resíduos Infectantes</h2> </Link>
                     </button>
                 </div>
                 
                 <div className={styles.containerResiduo}>
                     <button>
                         <img src={chemicalSymbol} alt="símbolo risco químico" />
-                        <h2>Resíduo Químico</h2>
+                        <Link to={"/Quimico"}> <h2>Resíduos Químicos</h2> </Link>
                     </button>
                 </div>
                 
                 <div className={styles.containerResiduo}>
                     <button>
                         <img src={radioactiveSymbol} alt="símbolo risco radioativo" />
-                        <h2>Resíduo Radioativo</h2>
+                        <Link to={"/Radioativo"}> <h2>Resíduos Radioativos</h2> </Link>
                     </button>
                 </div>
                 
                 <div className={styles.containerResiduo}>
                     <button>
                         <img src={commomSymbol} alt="símbolo resíduos comuns" />
-                        <h2>Resíduos Comuns</h2>
+                        <Link to={"/Comuns"}> <h2>Resíduos Comuns</h2> </Link>
                     </button>
                 </div>
                 
                 <div className={styles.containerResiduo}>
                     <button>
                         <img src={sharpSymbol} alt="símbolo resíduos perfurocortantes" />
-                        <h2>Resíduo Perfurocortante</h2>
+                        <Link to={"/Perfurocortante"}> <h2>Resíduos Perfurocortantes</h2> </Link>
                     </button>
                 </div>
             </div> 

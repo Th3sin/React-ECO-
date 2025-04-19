@@ -13,7 +13,7 @@ import Infectante from "./pages/Descarte/Grupos/Infectante";
 import Quimico from "./pages/Descarte/Grupos/Quimico";
 import Radioativo from "./pages/Descarte/Grupos/Radioativo";
 import Perfurocortante from "./pages/Descarte/Grupos/Perfurocortante";
-import Comuns from "./pages/Descarte/Grupos/Comuns";
+import Comum from "./pages/Descarte/Grupos/Comum";
 import Informativo from "./pages/Descarte/Informativo";
 import NovaSolicitacao from "./pages/Coleta/Pedidos/NovaSolicitacao";
 import HistoricoSolicitacoes from "./pages/Coleta/Historico/HistoricoSolicitacoes";
@@ -57,7 +57,7 @@ function RoutesApp() {
                     <Route path="/Quimico" element={<Quimico />} />
                     <Route path="/Infectante" element={<Infectante />} />
                     <Route path="/Radioativo" element={<Radioativo />} />
-                    <Route path="/Comuns" element={<Comuns />} />
+                    <Route path="/Comum" element={<Comum />} />
                     <Route path="/Perfurocortante" element={<Perfurocortante />} />
 
                     {/* Páginas sem Header */}

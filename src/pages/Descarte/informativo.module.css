@@ -28,6 +28,15 @@
     transition: transform 0.2s ease-in-out;
 }
 
+.containerResiduo a {
+    text-decoration: none;
+    color: black;
+}
+
+.containerResiduo a:hover {
+    color: green;
+}
+
 .containerResiduo button:hover {
     transform: translateY(-5px) scale(1.05);
 }
