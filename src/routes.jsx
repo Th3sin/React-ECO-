@@ -9,7 +9,7 @@ import EmpresaDestinadoraCadastro from './pages/Registros/Destinadora/EmpresaDes
 import CadastroEmpresa from './pages/Registros/Geradora/CadastroEmpresa';
 import Informativo from "./pages/Descarte/Informativo";
 import Endereco from "./components/Formularios/Endereco";
-import Solicitacao from "./pages/Coleta/Solicitacao";
+import Solicitacao from "./pages/Coleta/Form/Solicitacao";
 // import Infectante from "./pages/Descarte/Infectante";
 // import Quimico from "./pages/Descarte/Quimico";
 // import Radioativo from "./pages/Descarte/Radioativo";

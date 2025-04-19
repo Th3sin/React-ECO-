@@ -51,6 +51,10 @@ function Solicitacao() {
         fetchEndereco();
     }, [formData.cep]);
 
+
+    //é responsável por enviar os dados do formulário para a API, tratando a resposta e exibindo mensagens de sucesso ou erro
+    //A função utiliza fetch para enviar os dados como JSON, e dependendo da resposta do servidor, o formulário pode ser resetado ou o usuário será informado de um erro
+
     const handleSubmit = async (e) => {
         e.preventDefault();
     
@@ -134,7 +138,7 @@ function Solicitacao() {
 
                     <div className="form-group">
                         <label>Complemento</label>
-                        <input type="text" name="numero" placeholder="Digite o complemento (opcional)" value={formData.complemento} onChange={handleInputChange} />
+                        <input type="text" name="complemento" placeholder="Digite o complemento (opcional)" value={formData.complemento} onChange={handleInputChange} />
                     </div>
 
                     <div className="form-group">

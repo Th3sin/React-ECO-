@@ -70,7 +70,7 @@ function Endereco() {
 
       <div>
           <label>Complemento</label>
-          <input type="text" name="numero" placeholder="Digite o complemento (opcional)" value={complemento} />
+          <input type="text" name="complemento" placeholder="Digite o complemento (opcional)" value={complemento} />
       </div>
 
       <div>

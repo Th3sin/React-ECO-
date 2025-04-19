@@ -20,7 +20,7 @@ const InformacoesPessoais = ({ formData, handleInputChange }) => {
 
       <div>
         <label htmlFor="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" value={formData.telefone} onChange={handleInputChange} required placeholder="Digite o telefone" />
+        <input type="tel" id="telefone" name="telefone" value={formData.telefone} onChange={handleInputChange} required placeholder="Digite o telefone" />
       </div>
 
       <div>
