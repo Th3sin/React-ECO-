@@ -24,10 +24,10 @@ function Login() {
       alert("Por favor, preencha todos os campos");
 
     } else if (username === fixedUsername && password === fixedPassword) {
-      navigate("/");
+      navigate("/Home");
 
     } else {
-      setError("Usuário ou senha incorretos!");
+      alert("Usuário ou senha incorretos!"); // ou seterror
     }
   };
 
