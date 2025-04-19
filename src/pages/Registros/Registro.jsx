@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./registro.css";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Registro = () => {
@@ -36,7 +37,7 @@ const Registro = () => {
       
     } catch (error) {
       alert("Erro ao cadastrar. Verifique todos os campos!");
-      console.log("Erro ao cadastrar usuário:", error);
+      console.log("Erro ao cadastrar usuário:", error); // mensagem no console f12
     }
   };
 
@@ -98,11 +99,17 @@ const Registro = () => {
             <button 
               type="submit" 
               alt="botão de cadastrar usuário no sistema" 
-              title="Clique para finalizar seu cadastro"
-            >
+              title="Clique para finalizar seu cadastro" >
               Cadastrar
             </button>
           </div>
+          
+          <div className="sign-in-link">
+            <p>Já possui uma conta?
+              <Link to="/Login">Faça login</Link>
+            </p>
+          </div>
+
         </form>
       </div>
     </div>

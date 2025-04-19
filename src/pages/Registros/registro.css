@@ -138,8 +138,7 @@
 }
 
 .formulario-cadastro button[type="submit"] {
-  margin-top: 35px;
-  margin-bottom: 7.5px;
+  margin-top: 30px;
   width: 100%;
   padding: 10px 0;
   cursor: pointer;
@@ -168,4 +167,19 @@
   color: #666;
   font-size: 17px;
   z-index: 2;
+}
+
+.sign-in-link {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in-link a {
+  text-decoration: none;
+  margin-left: 4px;
+  color: #218962;
+}
+
+.sign-in-link a:hover {
+  text-decoration: underline;
 }
