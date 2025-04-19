@@ -1,51 +1,12 @@
+// src/components/Mapa/Ecomapa.jsx
+
 import React, { useState } from "react";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-//import { Marker } from '@react-google-maps/api';
 import styles from "./ecomapa.module.css";
+import { tipoResiduo, materiais } from '../../data/materiais';  // Corrija o caminho conforme necessário
 import { Link } from 'react-router-dom';
 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
-
-// TIPOS DE RESÍDUOS
-const tipoResiduo = [ 
-    "Orgânico", "Eletrônico", "Hospitalar", "Entulhos", "Têxteis", 
-    "Perfurocortante", "Químico", "Radioativo", "Plástico", "Vidro", 
-    "Metais", "Papel", "Agroindustrial", "Inerte" 
-];
-
-// ORGÂNICO
-const materiaisOrgânicos = [ 
-    "Sobras de alimentos", "Grãos", "Frutas e vegetais", "Cascas de frutas e legumes", 
-    "Polpas", "Restos de carne", "Carnes", "Talos", "Talos de plantas", "Folhas", 
-    "Galhos", "Madeira", "Esterco", "Alimentos vencidos" 
-];
-
-// ELETRÔNICO
-const materiaisEletronicos = [ 
-    "Celular", "Notebook", "Computador", "Tablet", "Televisão", "Monitor", 
-    "Impressora", "Teclado", "Mouse", "Carregador", "Fone de ouvido", "Roteador", 
-    "Modem", "HD externo", "Pendrive", "Câmera digital", "Caixa de som", 
-    "DVD player", "Vídeo game", "Bateria recarregável" 
-];
-
-// HOSPITALAR
-const materiaisHospitalares = [ 
-    "Seringas", "Agulhas", "Cânulas", "Lâminas de bisturi", "Lâminas de barbear", 
-    "Frascos de medicamentos", "Ampolas de vidro", "Papel absorvente", "Gaze" , 
-    "Curativos", "Luvas descartáveis", "Máscaras descartáveis", "Toucas Descartáveis", 
-    "Aventais descartáveis", "Escalpes" , "Cateteres" , "Equipamentos de endoscopia", 
-    "Fraldas hospitalares", "Bolsas de sangue", "Sacos de soro", 
-    "Termômetros descartáveis", "Eletrodos descartáveis", "Papel toalha", 
-    "Toalhas descartáveis", "Medicamentos", "Resíduos de exames", "Tecidos", 
-    "Produtos de higiene", "Resíduos de produtos odontológicos", 
-    "Frascos de vidro quebrados", "Sacos de lixo infectantes" 
-];
-
-// ENTULHO 
-const residuosConstrucao = ["Tijolos", "Sobras de material", "Entulhos", "Amianto", "Cerâmicas", "Fios e cabos elétricos" ];
-
-// TÊXTEIS
-const residuosTexteis = [""];
 
 const formatarCEP = (cep) => {
     const numeros = cep.replace(/\D/g, '').slice(0, 8); 
@@ -111,8 +72,7 @@ function Ecomapa() {
                             name="distancia" 
                             className={`${styles.selectField} ${styles.selecioneDistancia}`}  
                             value={formData.distancia} 
-                            onChange={handleChange}
-                        >
+                            onChange={handleChange} >
                             {[3, 7, 10, 15, 20, 25, 30].map((dist) => (
                                 <option key={dist} value={dist}>{dist} (km)</option>
                             ))}
@@ -131,22 +91,6 @@ function Ecomapa() {
                             <option value="" disabled>Selecione o tipo do resíduo</option>
                             {tipoResiduo.map((residuo, index) => (
                                 <option key={index} value={residuo}>{residuo}</option>
-                            ))}
-                        </select>
-                    </div>
-
-                    {/* Material */}
-                    <div className={styles.materialInputs}>
-                        <label htmlFor="material" className={styles.label}>Material</label>
-                        <select 
-                            name="material" 
-                            className={`${styles.selectField} ${styles.selecioneMaterial}`}  
-                            value={formData.material} 
-                            onChange={handleChange}
-                        >
-                            <option value="" disabled>Selecione um material</option>
-                            {materiaisEletronicos.map((material, index) => (
-                                <option key={index} value={material}>{material}</option>
                             ))}
                         </select>
                     </div>
@@ -172,13 +116,6 @@ function Ecomapa() {
                         />
                     )}
                 </div>
-            </div>
-
-            {/* Link para Informativo */}
-            <div className={styles.linkToInformativo}>
-                    <Link to="/Informativo">
-                        <h2>Clique aqui para saber mais sobre resíduos, reciclagem +</h2>
-                    </Link>
             </div>
 
         </div>

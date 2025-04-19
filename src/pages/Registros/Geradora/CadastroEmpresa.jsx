@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./cadastroEmpresa.module.css";
-import InformacoesPessoais from '../../../components/Formularios/InformacoesPessoais';
+import InformacoesPessoais from '../../../components/Formularios/Informacoes';
 import Endereco from '../../../components/Formularios/Endereco';
 
 const CadastroEmpresa = () => {
@@ -20,7 +20,7 @@ const handleSubmit = (e) => {
       <h2>Informações</h2>
       <form onSubmit={handleSubmit}>
 
-        <InformacoesPessoais
+        <Informacoes
           formData={formData}
           handleInputChange={handleInputChange} />
 

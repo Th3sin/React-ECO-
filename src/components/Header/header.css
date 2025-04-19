@@ -1,13 +1,23 @@
 header {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    font-family: "American Typewriter", serif;
-    background-color: #10292a;
-    height: 80px; 
-    z-index: 10;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+header.with-transition {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+  
+header.scrolled {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo-header {

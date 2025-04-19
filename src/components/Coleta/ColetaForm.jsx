@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './solicitacao.css';
+import './coletaForm.css';
 
-function Solicitacao() {
+function ColetaForm() {
 
     // Declaração da constante classes e grupos para Resíduos (SELECT)
     const classes = ['Perigoso', 'Não Perigoso'];
@@ -50,7 +50,6 @@ function Solicitacao() {
         };
         fetchEndereco();
     }, [formData.cep]);
-
 
     //é responsável por enviar os dados do formulário para a API, tratando a resposta e exibindo mensagens de sucesso ou erro
     //A função utiliza fetch para enviar os dados como JSON, e dependendo da resposta do servidor, o formulário pode ser resetado ou o usuário será informado de um erro
@@ -238,4 +237,4 @@ function Solicitacao() {
     );
 }
 
-export default Solicitacao;
+export default ColetaForm;

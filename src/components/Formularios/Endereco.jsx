@@ -4,7 +4,8 @@ import "./endereco.css";
 
 function Endereco() {
 
-    //useState armazena os valores de endereço
+  //useState armazena os valores de endereço
+
   const [cep, setCep] = useState('');
   const [logradouro, setLogradouro] = useState('');
   const [numero, setNumero] = useState('');
@@ -13,11 +14,15 @@ function Endereco() {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
 
-    //useEffect faz a requisição quando o cep é PREENCHIDO (8 digitos)
-  useEffect(() => {
+  
+  const formatarCEP = (cep) => {
+    const numeros = cep.replace(/\D/g, '').slice(0, 8); 
+    return numeros.length > 5 ? numeros.replace(/(\d{5})(\d{1,3})/, '$1-$2') : numeros;
+  };
 
+  //useEffect faz a requisição quando o cep é PREENCHIDO (8 digitos)
+  useEffect(() => {
     if (/^\d{8}$/.test(cep)) {
-      
       buscarEnderecoPorCEP(cep).then(data => {
         if (data && !data.error) {
           console.log("Dados da API: ", data);
@@ -28,21 +33,20 @@ function Endereco() {
           setEstado(data.uf);
 
           console.log(`Campos preenchidos:
-
             - Logradouro: ${data.logradouro}
             - Bairro: ${data.bairro}
-            - Cidade: ${data.cidade}
-            - Estado: ${data.estado}
-            - Número: ${data.numero}`);
+            - Cidade: ${data.localidade}
+            - Estado: ${data.uf}
+            - Número: ${numero}`);
 
         } else {
 
           alert("CEP não encontrado!");
-
         }
 
       }).catch(error => console.error("Erro ao buscar CEP:", error));
     }
+
   }, [cep]);
 
   return (
@@ -53,7 +57,12 @@ function Endereco() {
 
       <div>
         <label>CEP:</label>
-        <input type="text" value={cep} onChange={(e) => setCep(e.target.value)} maxLength="8" placeholder="Digite seu CEP"
+        <input 
+          type="text" 
+          value={formatarCEP(cep)} 
+          onChange={(e) => setCep(e.target.value)} 
+          maxLength="9" 
+          placeholder="Digite seu CEP"
         />
       </div>
 
@@ -64,13 +73,22 @@ function Endereco() {
 
       <div>
         <label>Número:</label>
-        <input type='number' value={numero} onChange={(e) => setNumero(e.target.value)} />
+        <input 
+          type='number' 
+          value={numero} 
+          onChange={(e) => setNumero(e.target.value)} 
+        />
       </div>
 
-
       <div>
-          <label>Complemento</label>
-          <input type="text" name="complemento" placeholder="Digite o complemento (opcional)" value={complemento} />
+        <label>Complemento</label>
+        <input 
+          type="text" 
+          name="complemento" 
+          placeholder="Digite o complemento (opcional)" 
+          value={complemento} 
+          onChange={(e) => setComplemento(e.target.value)} 
+        />
       </div>
 
       <div>
@@ -92,7 +110,6 @@ function Endereco() {
 }
 
 export default Endereco;
-
 
 // RESUMO DO FLUXO:
 

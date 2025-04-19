@@ -1,66 +1,77 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from './pages/Header/Header';
+import Header from './components/Header/Header'; 
+import Footer from './components/Layout/Footer';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Ecomapa from './components/Mapa/Ecomapa';
-import Register from './pages/Registros/Registro';
+import Registro from './pages/Registros/Registro';
 import EmpresaDestinadoraCadastro from './pages/Registros/Destinadora/EmpresaDestinadoraCadastro';
 import CadastroEmpresa from './pages/Registros/Geradora/CadastroEmpresa';
-import Informativo from "./pages/Descarte/Informativo";
 import Endereco from "./components/Formularios/Endereco";
-import Solicitacao from "./pages/Coleta/Form/Solicitacao";
-// import Infectante from "./pages/Descarte/Infectante";
-// import Quimico from "./pages/Descarte/Quimico";
-// import Radioativo from "./pages/Descarte/Radioativo";
-// import Cortante from "./pages/Descarte/Cortante";
-// import Comuns from "./pages/Descarte/Comuns";
+import Infectante from "./pages/Descarte/Grupos/Infectante";
+import Quimico from "./pages/Descarte/Grupos/Quimico";
+import Radioativo from "./pages/Descarte/Grupos/Radioativo";
+import Perfurocortante from "./pages/Descarte/Grupos/Perfurocortante";
+import Comuns from "./pages/Descarte/Grupos/Comuns";
+import Informativo from "./pages/Descarte/Informativo";
+import NovaSolicitacao from "./pages/Coleta/Pedidos/NovaSolicitacao";
+import HistoricoSolicitacoes from "./pages/Coleta/Historico/HistoricoSolicitacoes";
 
-
-function AppHeader() {
+function Layout() {
     const location = useLocation();
     const [showHeader, setShowHeader] = useState(true);
 
     useEffect(() => {
         const noHeaderRoutes = [
-            "/Login", 
-            "/Registro", 
-            "/CadastroEmpresaColetora", 
-            "/CadastroEmpresa", 
+            "/Login",
+            "/Registro",
+            "/CadastroEmpresaColetora",
+            "/CadastroEmpresa",
             "/Background"
         ];
 
-        setShowHeader(!noHeaderRoutes.includes(location.pathname)); 
+        setShowHeader(!noHeaderRoutes.includes(location.pathname));
     }, [location.pathname]);
 
-    return showHeader ? <Header /> : null;
+    return (
+        <>
+            {showHeader && <Header />} {/* Aqui estamos controlando a renderização do Header */}
+            <main>
+                <Outlet /> {/* Exibe o conteúdo da página */}
+            </main>
+        </>
+    );
 }
 
 function RoutesApp() {
     return (
         <BrowserRouter>
-            <AppHeader />
             <Routes>
+                <Route path="/" element={<Login />} />
 
-                <Route path="/" element={<Home />} />
-                <Route path="/Ecomapa" element={<Ecomapa />} />
-                <Route path="/informativo" element={<Informativo />} />
+                <Route element={<Layout />}>
+                    <Route path="/Home" element={<Home />} />
+                    <Route path="/Ecomapa" element={<Ecomapa />} />
+                    <Route path="/informativo" element={<Informativo />} />
+                    <Route path="/Quimico" element={<Quimico />} />
+                    <Route path="/Infectante" element={<Infectante />} />
+                    <Route path="/Radioativo" element={<Radioativo />} />
+                    <Route path="/Comuns" element={<Comuns />} />
+                    <Route path="/Perfurocortante" element={<Perfurocortante />} />
 
-                {/* Páginas sem Header */}
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Registro" element={<Register />} />
-                <Route path="/CadastroEmpresaColetora" element={<EmpresaDestinadoraCadastro />} />
-                <Route path="/Cadastroempresa" element={<CadastroEmpresa />} />
-                <Route path="/Endereco" element={<Endereco />} />
-                <Route path="/Solicitacao" element={<Solicitacao />} />
-                {/* <Route path="/Quimico" element={<Quimico/>} />
-                <Route path="/Infectante" element={<Infectante/>} />
-                <Route path="/Radioativo" element={<Radioativo/>} />
-                <Route path="/Comuns" element={<Comuns />} />
-                <Route path="/Cortante" element={<Cortante />} /> */}
-                
+                    {/* Páginas sem Header */}
+                    <Route path="/Registro" element={<Registro />} />
+                    <Route path="/CadastroEmpresaColetora" element={<EmpresaDestinadoraCadastro />} />
+                    <Route path="/Cadastroempresa" element={<CadastroEmpresa />} />
+                    <Route path="/Endereco" element={<Endereco />} />
+                    <Route path="/HistoricoSolicitacoes" element={<HistoricoSolicitacoes />} />
+                    <Route path="/NovaSolicitacao" element={<NovaSolicitacao />} />
+                    <Route path="/Login" element={<Login />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );
 }
+
 export default RoutesApp;

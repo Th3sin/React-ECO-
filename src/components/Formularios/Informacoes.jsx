@@ -1,6 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
+import { useFormAction } from 'react-router-dom';
 
-const InformacoesPessoais = ({ formData, handleInputChange }) => {
+const Informacoes = ({ formData, handleInputChange }) => {
   return (
     <>
       <div>
@@ -48,4 +50,4 @@ const InformacoesPessoais = ({ formData, handleInputChange }) => {
   );
 };
 
-export default InformacoesPessoais;
+export default Informacoes;
